@@ -1,0 +1,342 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #789567
+    ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body::before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('img/1.jpg')no-repeat center center/cover;
+    background-filter: blue(5px);
+    opacity: 40;
+    
+}
+header {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    border: 4px solid grey;
+    border-radius: 20px;
+    z-index: 2;
+}
+header .main_img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+header .mic_dot {
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    background: grey;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .mic_dot .mic {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 1px;
+}
+
+header .mic_dot .dot {
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+header nav {
+    width: 90%;
+    height: 7%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .brand {
+    color: #fff;
+    font-family: "system-ui", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header nav ul {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul li {
+    list-style-type: none;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "system-ui", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: gray;
+}
+
+header nav .search {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header nav .search input {
+    width: 90%;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+/*nav end*/
+header section {
+    /*border: 1px solid #fff;*/
+    width: 95%;
+    height: 56.5%;
+    margin: auto;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+header section .content h1 {
+    color: #fff;
+    font-family: "system-ui", sans-serif;
+    font-size: 35px;
+}
+
+header section .content h1 span {
+    background: red;
+    padding: 0 15px;
+}
+
+header section .content h3 {
+    color: #fff;
+    font-family: "system-ui", sans-serif;
+    font-size: 20px;
+}
+
+header section .content .rating {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+header .cards {
+    border: 1px solid #fff;
+    width: 95%;
+    height: 30%;
+    margin: auto;
+}
+header section .content .subtitle{
+    color: gray;
+    margin-top:3px;
+}
+header section .content .subtitle span{
+    padding: 0px 5px;
+}
+
+header section .content .btns{
+    margin-top: 5px;
+    display: flex;
+}
+
+header section .content .btns button{
+    background: rgb(75, 75, 75);
+    border: none;
+    outline: none;
+    padding: 8px 13px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+header section .content .btns button:hover{
+    background: rgb(97, 191, 228);
+}
+header section .content .btns button:nth-child(2){
+    background: #fff;
+}
+header section .content .btns button:nth-child(2):hover{
+    background: rgb(0, 183, 255);
+}
+
+header section .content .btns button .bi{
+    color: #fff;
+    transmission: all .3s ease-in-out;
+}
+
+header section .content .btns button .bi:hover{
+    color: #fff;
+    transmission: all .3s ease-in-out;
+}
+
+
+/* cards start */
+header .cards{
+    border: 1px solid #fff;
+    width:95%;
+    height:36%;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .cards .card{
+    position: relative;
+    min-width: 125px;
+    min-height: 185px;
+    /* border: 1px solid red;*/
+    margin: 0px 5px;
+    border-radius: 10px;
+}
+
+
+header .cards .card img{
+    width: 100%;
+    height:185%;
+    border-radius:10px;
+}
+header .cards .card .continent{
+    position:absolute;
+    width: 100%;
+    height: 20%;
+    border-radius: 0px 0px 10px 10px;
+    /*background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    bottom:0;
+    z-index: 2;
+}
+header .cards .card .content::before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 10px 10px;
+    background: rgb(185, 185, 185, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    
+    header .cards .card .content h4{
+        color: #fff;
+        font-size: 13px;
+    }
+    header .cards .card .content p{
+        color: #fff;
+        font-size: 10px;
+    }
+    
+    @media only screen and (max-width: 1190px){
+        header .cards{
+            overflow-x: auto;
+        }
+    }
+    
+      @media only screen and (max-width: 641px){
+          header nav ul li{
+              padding: 3px 7px;
+          }
+          header nav ul li a{
+              font-size: 10px;
+          }
+    }
+    
+    @media only screen and (max-width: 541px){
+        header section .content{
+            padding-left:15px;
+        }
+        header .mic_dot{
+
+            left:37%;
+        }
+        header nav{
+            height: 15px;
+            flex-wrap:wrap;
+        } 
+        header nav .brand{
+            width: 100%;
+            height: 45%;
+        }
+        header ul{
+            width: 100%;
+            height: 200%; 
+        }
+        header search{
+            width: 100%;
+            height: 200%; 
+            justify-content: center;
+        }
+        header section{
+            height: 40%; 
+        }
+        header .cards{
+            width: 95%;
+            height: 45%;
+        }
+    }
+        @media only screen and (max-width: 359px){
+            header section .content h1{
+                font-size: 30px;
+            }
+            header section{
+                height:50%;
+            }
+            header .cards.card{
+                min-width: 110px;
+                min-height: 145px;
+            }
+            header .cards .card img{
+                width: 110px;
+                height: 145px;
+             footer>
+                <p>&copy; 2025 Desi-Movies. All rights reserved.</p>
+                <div>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+            </footer>
+ } 
+}
